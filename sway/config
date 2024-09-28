@@ -87,7 +87,7 @@ input "type:keyboard" {
     bindsym $mod+d exec $menu
 	
     # Start browser
-    bindsym $mod+w exec flatpak run io.github.ungoogled_software.ungoogled_chromium
+    bindsym $mod+w exec firefox 
 
     # Start file explorer
     bindsym $mod+n exec thunar
