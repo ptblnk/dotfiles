@@ -1,0 +1,9 @@
+{
+    "workbench.sideBar.location": "right",
+    "workbench.colorTheme": "GitHub Dark Default",
+    "workbench.productIconTheme": "material-product-icons",
+    "workbench.iconTheme": "material-icon-theme",
+    "keyboard.dispatch": "keyCode",
+    "editor.linkedEditing": true,
+    "editor.minimap.enabled": false
+}
