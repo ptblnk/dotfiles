@@ -5,5 +5,6 @@
     "workbench.iconTheme": "material-icon-theme",
     "keyboard.dispatch": "keyCode",
     "editor.linkedEditing": true,
-    "editor.minimap.enabled": false
+    "editor.minimap.enabled": false,
+    "window.titleBarStyle": "custom"
 }
