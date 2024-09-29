@@ -1,4 +1,4 @@
-/*Dracula theme based on the Purple official rofi theme*/
+/*github dark theme based on the vim-github-dark theme*/
 
 configuration {
     show-icons:      true;
@@ -7,12 +7,12 @@ configuration {
 }
 
 * {
-    font: "Jetbrains Mono 12";
-    foreground: #f8f8f2;
-    background-color: #282a36;
-    active-background: #6272a4;
-    urgent-background: #ff5555;
-    urgent-foreground: #282a36;
+    font: "JetbrainsMono Nerd Font 12";
+    foreground: #ecf2f8;
+    background-color: #161b22;
+    active-background: #21262d;
+    urgent-background: #fa7970;
+    urgent-foreground: #161b22;
     selected-background: @active-background;
     selected-urgent-background: @urgent-background;
     selected-active-background: @active-background;
@@ -22,8 +22,8 @@ configuration {
 
 #window {
     background-color: @background-color;
-    border:           3;
-    border-radius:    6;
+    border:           1;
+    border-radius:    1;
     border-color:     @bordercolor;
     padding:          15;
 }

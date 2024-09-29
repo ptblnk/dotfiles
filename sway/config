@@ -220,15 +220,16 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-### Window configuration
+### Appearance
 #
 # Bar configuration:
   #default_border none
 # Window colours
-  client.focused               #606060     #272727    #FFFFFFFF    #80808080      #606060
-  client.unfocused             #272727     #272727    #FFFFFFFF    #80808080      #80808080
-  client.focused_inactive      #272727     #272727    #FFFFFFFF    #80808080      #80808080
-
+  client.focused               #21262d     #161b22    #ecf2f8    #80808080      #21262d
+  client.unfocused             #161b22     #161b22    #ecf2f8    #80808080      #80808080
+  client.focused_inactive      #161b22     #161b22    #ecf2f8    #80808080      #80808080
+# Fonts
+  font pango:JetBrainsMono Nerd Font 10
 
 # Include configs from 3 locations:
 #  - /usr/share/sway/config.d
