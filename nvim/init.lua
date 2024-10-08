@@ -422,7 +422,7 @@ require('lazy').setup({
         --
         -- See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
-        tsserver = {},
+        --tsserver = {},
         --
         lua_ls = {
           -- cmd = {...},
