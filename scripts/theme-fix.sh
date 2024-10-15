@@ -1,9 +1,7 @@
 #!/bin/bash
 
-gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
-gsettings set org.gnome.desktop.interface icon-theme 'elementary'
-gsettings set org.gnome.desktop.interface cursor-theme 'elementary'
-gsettings set org.gnome.desktop.interface font-name 'Roboto Slab 10'
+gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+gsettings set org.gnome.desktop.interface font-name 'JetBrainsMono Nerd Font'
 
-echo "Updated GTk themes"
+echo "Updated GTK themes"
 
