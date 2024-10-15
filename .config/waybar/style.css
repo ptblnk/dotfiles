@@ -50,7 +50,15 @@ button:hover {
 
 /* you can set a style on hover for any module like this */
 #pulseaudio:hover {
-    background-color: #a37800;
+    background-color: #21262d
+}
+
+#network:hover {
+    background-color: #21262d
+}
+
+#idle_inhibitor:hover {
+    background-color: #21262d
 }
 
 #workspaces button {
