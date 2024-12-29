@@ -22,7 +22,6 @@ else
   echo "Error during installation!"
 fi
 
-
 echo "Copying configs..."
 
 SOURCE_DIR="$(dirname "$PWD")/.config"
@@ -43,8 +42,8 @@ fi
 
 echo "Downloading fonts..."
 
-DOWNLOAD_URL = "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/JetBrainsMono.zip"
-DEST_FILE = "JetBrainsMono.zip"
+DOWNLOAD_URL="https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/JetBrainsMono.zip"
+DEST_FILE="JetBrainsMono.zip"
 
 wget "$DOWNLOAD_URL" -O "$DEST_FILE"
 
@@ -64,7 +63,7 @@ fi
 
 echo "Unzipping fonts..."
 
-TEMP_DIR = "JetBrainsMono"
+TEMP_DIR="JetBrainsMono"
 unzip "$DEST_FILE" -d "$TEMP_DIR"
 
 if [ $? -eq 0 ]; then
@@ -109,11 +108,10 @@ fi
 
 echo "Refreshing Sway..."
 
-swaymsg reload
+if command -v swaymsg &> /dev/null; then
+  swaymsg reload
+else
+  echo "Not running in a Sway session, skipping swaymsg reload."
+fi
 
 echo "Installation complete!"
-
-
-
-
-
