@@ -28,7 +28,7 @@ set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi
 ### Output configuration
 #
 # Wallpaper
-#output * bg /home/ptblank/Pictures/Wallpapers/hg7bwrnnly981.png fill
+#output * bg /home/netmoss/Pictures/Wallpapers/hg7bwrnnly981.png fill
 #
 # Display configuration:
 #
