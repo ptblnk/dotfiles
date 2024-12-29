@@ -93,6 +93,20 @@ rm -rf "$TEMP_DIR"
 echo "Rebuilding font cache..."
 fc-cache -fv
 
+echo "Fixing GTK themes..."
+
+if [ -f "./theme-fix.sh" ]; then
+  ./theme-fix.sh
+  if [ $? -eq 0 ]; then
+    echo "theme-fix.sh executed successfully!"
+  else
+    echo "Error: theme-fix.sh execution failed!"
+  fi
+else
+  echo "Error: theme-fix.sh not found!"
+  exit 1
+fi
+
 echo "Refreshing Sway..."
 
 swaymsg reload
