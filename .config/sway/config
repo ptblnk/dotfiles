@@ -28,7 +28,7 @@ set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi
 ### Output configuration
 #
 # Wallpaper
-#output * bg /home/netmoss/Pictures/Wallpapers/hg7bwrnnly981.png fill
+output * bg /home/netmoss/Pictures/Wallpapers/hg7bwrnnly981.png fill
 #
 # Display configuration:
 #
@@ -53,17 +53,17 @@ exec swayidle -w \
 #
 # Touchpad configuration
 #
-# input "type:touchpad" {
-#     dwt enabled
-#     tap enabled
-#     natural_scroll enabled
-#     middle_emulation enabled
-#     click_method clickfinger
-#    }
+input "type:touchpad" {
+    dwt enabled
+    tap enabled
+    natural_scroll enabled
+    middle_emulation enabled
+     click_method clickfinger
+    }
 #
 # Touchpad gestures
-# bindgesture swipe:right workspace prev
-# bindgesture swipe:left workspace next
+bindgesture swipe:right workspace prev
+bindgesture swipe:left workspace next
 #
 # Mouse configuration
 #
@@ -328,11 +328,7 @@ bindsym {
 }
 # Key bindings to control pipewire or pulseaudio volume with pactl.
 # Displays a notification with the current state if /usr/bin/notify-send is available
-#
-# Volume increase/decrease step can be customized by setting the `$volume_step`
-# variable to a numeric value before including the file.
-# Maximum volume boost level can be set with the `$volume_limit` variable.
-#
+
 # Requires:     pulseaudio-utils
 # Recommends:   libnotify
 
@@ -373,49 +369,21 @@ bar {
 # variables. For a predictable behavior, keep the `$screen_timeout` value
 # lesser than the `$lock_timeout`.
 #
-# You can also lock the screen manually by running `loginctl lock-session` or
-# add a binding for the command. Example:
-#     bindsym $mod+Shift+Escape  exec loginctl lock-session
-#
-# Note that all swaylock customizations are handled via /etc/swaylock/config and
-# can be overridden via $XDG_CONFIG_HOME/swaylock/config (~/.config/swaylock/config).
-#
 # Requires: swayidle
-# Requires: swaylock
+# Requires: gtklock
 # Requires: /usr/bin/pkill, /usr/bin/pgrep
 
 exec LT="$lock_timeout" ST="$screen_timeout" LT=${LT:-300} ST=${ST:-60} && \
     swayidle -w \
-        timeout $LT 'swaylock -f' \
+        timeout $LT 'gtklock -f' \
         timeout $((LT + ST)) 'swaymsg "output * power off"' \
                       resume 'swaymsg "output * power on"'  \
-        timeout $ST 'pgrep -xu "$USER" swaylock >/dev/null && swaymsg "output * power off"' \
-             resume 'pgrep -xu "$USER" swaylock >/dev/null && swaymsg "output * power on"'  \
-        before-sleep 'swaylock -f' \
-        lock 'swaylock -f' \
-        unlock 'pkill -xu "$USER" -SIGUSR1 swaylock'
-# Start graphical authentication agent for PolicyKit.
-#
-# Certain applications may require this to request elevated privileges:
-#   GParted, virt-manager, anything that uses pkexec
-#
-# Requires: lxqt-policykit
+        timeout $ST 'pgrep -xu "$USER" gtklock >/dev/null && swaymsg "output * power off"' \
+             resume 'pgrep -xu "$USER" gtklock >/dev/null && swaymsg "output * power on"'  \
+        before-sleep 'gtklock -f' \
+        lock 'gtklock -f' \
+        unlock 'pkill -xu "$USER" -SIGUSR1 gtklock'
 
-exec /usr/libexec/lxqt-policykit-agent
-# Wait until a StatusNotifierItem tray implementation is available and
-# process XDG autostart entries.
-#
-# This horror has to exist because
-#
-#  - SNI spec mandates that if `IsStatusNotifierHostRegistered` is not set,
-#    the client should fall back to the Freedesktop System Tray specification
-#    (XEmbed).
-#  - There are actual implementations that take this seriously and implement
-#    a fallback *even if* StatusNotifierWatcher is already DBus-activated.
-#  - https://github.com/systemd/systemd/issues/3750
-#
-exec /usr/libexec/sway-systemd/wait-sni-ready && \
-    systemctl --user start sway-xdg-autostart.target
 # Create or update XDG user dir configuration
 #
 # See also:
@@ -426,10 +394,10 @@ exec /usr/libexec/sway-systemd/wait-sni-ready && \
 
 exec /usr/bin/xdg-user-dirs-update
 
-## Environmental variables
-exec export WLR_RENDERER=vulkan
-exec export WLR_NO_HARDWARE_CURSORS=1
-exec export XWAYLAND_NO_GLAMOR=1
-exec export GBM_BACKEND=nvidia_drm
-exec export __GLX_VENDOR_LIBRARY_NAME=nvidia
+## Environmental variables for Nvidia GPUs
+# exec export WLR_RENDERER=vulkan
+# exec export WLR_NO_HARDWARE_CURSORS=1
+# exec export XWAYLAND_NO_GLAMOR=1
+# exec export GBM_BACKEND=nvidia_drm
+# exec export __GLX_VENDOR_LIBRARY_NAME=nvidia
 
