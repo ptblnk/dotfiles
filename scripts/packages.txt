@@ -22,4 +22,8 @@ unzip
 light
 grimshot
 brightnessctl
-vesktop
+vesktop-bin
+xdg-desktop-portal
+xdg-desktop-portal-gtk
+xdg-desktop-portal-wlr
+
