@@ -26,4 +26,4 @@ vesktop-bin
 xdg-desktop-portal
 xdg-desktop-portal-gtk
 xdg-desktop-portal-wlr
-
+syncthing
