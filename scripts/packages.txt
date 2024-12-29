@@ -22,3 +22,4 @@ unzip
 light
 grimshot
 brightnessctl
+vesktop
