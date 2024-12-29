@@ -9,6 +9,7 @@ pipewire-alsa
 pipewire-pulse
 pipewire-jack
 wireplumber
+xorg-xwayland
 gtklock
 wlsunset
 imv
