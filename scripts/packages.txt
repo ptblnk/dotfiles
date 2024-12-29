@@ -19,3 +19,6 @@ dunst
 kanshi
 thunar
 unzip
+light
+grimshot
+brightnessctl
