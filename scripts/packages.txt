@@ -27,3 +27,6 @@ xdg-desktop-portal
 xdg-desktop-portal-gtk
 xdg-desktop-portal-wlr
 syncthing
+noto-fonts
+noto-fonts-cjk
+noto-fonts-emoji
