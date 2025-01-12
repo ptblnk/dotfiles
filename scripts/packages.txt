@@ -31,3 +31,6 @@ npm
 noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
+udisks2
+udiskie
+ntfs-3g
