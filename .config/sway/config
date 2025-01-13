@@ -398,3 +398,7 @@ exec /usr/bin/xdg-user-dirs-update
 ## Screensharing
 exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+
+## Automounting volumes
+exec udiskie -ANt &
+
