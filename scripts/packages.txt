@@ -1,7 +1,10 @@
 alacritty
 neovim
 firefox
+mpv
+qemu-full
 virt-manager
+pyright
 flatpak
 pipewire
 pipewire-audio
