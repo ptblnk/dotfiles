@@ -37,3 +37,4 @@ noto-fonts-emoji
 udisks2
 udiskie
 ntfs-3g
+libappindicator-gtk3
