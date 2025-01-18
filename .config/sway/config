@@ -325,11 +325,11 @@ bindsym {
 
 bindsym {
     # Capture the currently active output
-    Print       exec grimshot save output $(xdg-user-dir PICTURES)/$(date +%y-%m-%d_%H-%M-%S.png)
+    Print       exec grimshot save output ~/Pictures/$(date +%y-%m-%d_%H-%M-%S.png)
     # Capture the currently active window
-    Alt+Print   exec grimshot save active $(xdg-user-dir PICTURES)/$(date +%y-%m-%d_%H-%M-%S.png)
+    Alt+Print   exec grimshot save active ~/Pictures/$(date +%y-%m-%d_%H-%M-%S.png)
     # Select and capture a custom rectangular area
-    Ctrl+Print  exec grimshot save area $(xdg-user-dir PICTURES)/$(date +%y-%m-%d_%H-%M-%S.png)
+    Ctrl+Print  exec grimshot save area ~/Pictures/$(xdg-user-dir PICTURES)/$(date +%y-%m-%d_%H-%M-%S.png)
 }
 # Key bindings to control pipewire or pulseaudio volume with pactl.
 # Displays a notification with the current state if /usr/bin/notify-send is available
