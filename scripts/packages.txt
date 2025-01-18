@@ -2,6 +2,8 @@ alacritty
 neovim
 firefox
 mpv
+thunar
+gvfs
 qemu-full
 virt-manager
 pyright
