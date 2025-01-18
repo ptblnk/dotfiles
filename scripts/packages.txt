@@ -38,3 +38,5 @@ udisks2
 udiskie
 ntfs-3g
 libappindicator-gtk3
+thunar-archive-plugin
+xarchiver
